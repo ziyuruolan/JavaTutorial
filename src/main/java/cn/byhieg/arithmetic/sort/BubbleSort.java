@@ -25,6 +25,17 @@ public class BubbleSort {
         }
     }
 
+    static void bubbleSort2(int[] arr){
+        for (int end = arr.length;end >0 ;end--) {
+            int border = 0 ;
+            for (int i= 0;i<end;i++) {
+                swap(arr,i,i+1);
+                border = i + 1;
+            }
+            end = border;
+        }
+    }
+
     public static int[] bubbleSort(int[] array){
         if (array.length == 0) {
             return array;
@@ -54,6 +65,13 @@ public class BubbleSort {
         bubbleSort1( arr1 );
         System.out.printf( "2排序后的数组为：" );
         for (int num :arr1) {
+            System.out.printf( num+" " );
+        }
+        System.out.println(  );
+        int[] arr2 = {6,3,5,7,3,7,8,9,1};
+        bubbleSort1( arr2 );
+        System.out.printf( "2排序后的数组为：" );
+        for (int num :arr2) {
             System.out.printf( num+" " );
         }
     }
