@@ -19,12 +19,13 @@ public class dichotomyInsertSort {
             }
             for (int j = i-1;j>=L;j--) {
                 arr[j+1] =arr[j];
-                arr[L]=key;
             }
+            arr[L] = key;
+
         }
     }
     public static void main(String[] args){
-        int[] arr = {6,3,5,7,3,7,8,9,1};
+        int[] arr = {3,6,5,7,3,7,8,9,1};
         insertSort(arr);
         System.out.printf( "1排序后的数组为 ：" );
         for (int num:arr) {
